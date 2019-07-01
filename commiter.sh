@@ -10,7 +10,7 @@ while [ "$continue" != "n" ]
 do
 
 #git_cd(){
-#
+# cd automation coming soon
 #    while [ $cd_continue != "y" ]
 #    do
 #    ls
@@ -32,6 +32,8 @@ git_commit(){
     git status
 }
 git fetch
+echo "Ran git fetch"
+echo
 git status
 read -p "Would you like to git pull? (y/n): " pull_answer
 if [ $pull_answer == y ]; then
@@ -44,3 +46,8 @@ else
 fi
 read -p "Would you like to run this script again? (y/n): " continue
 done
+
+
+#Features to add:
+#cd automation
+#git pull automatic
