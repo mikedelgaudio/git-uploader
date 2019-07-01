@@ -4,6 +4,7 @@
 clear
 echo "This script automates git commands"
 echo "It will first git fetch and git status below"
+echo "================================="
 echo
 
 while [ "$continue" != "n" ]
@@ -32,9 +33,10 @@ git_commit(){
     git status
 }
 git fetch
-echo "Ran git fetch"
+echo "============RAN GIT FETCH============"
 echo
 git status
+echo
 read -p "Would you like to git pull? (y/n): " pull_answer
 if [ $pull_answer == y ]; then
     git pull
@@ -42,7 +44,7 @@ if [ $pull_answer == y ]; then
 elif [ $pull_answer == n ]; then
     git_commit
 else
-    echo "Sorry, this script didn't work"
+    echo "Sorry, this script didn't work :( "
 fi
 read -p "Would you like to run this script again? (y/n): " continue
 done
