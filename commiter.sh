@@ -30,22 +30,29 @@ git_commit(){
     clear
     git commit -m "${message}"
     git push
+    echo
     git status
+    echo "============RAN GIT STATUS============"
+    echo
+    echo
 }
 git fetch
 echo "============RAN GIT FETCH============"
 echo
-git status
 echo
-read -p "Would you like to git pull? (y/n): " pull_answer
-if [ $pull_answer == y ]; then
-    git pull
-    git_commit
-elif [ $pull_answer == n ]; then
-    git_commit
-else
-    echo "Sorry, this script didn't work :( "
-fi
+echo
+git status
+echo "============RAN GIT STATUS============"
+echo
+echo
+echo
+git pull
+echo "============RAN GIT PULL============"
+echo 
+echo 
+echo
+git_commit
+
 read -p "Would you like to run this script again? (y/n): " continue
 done
 
